@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class App {
     public static void main(String[] args) {
         Client[] tab = new Client[10];
@@ -45,5 +47,36 @@ public class App {
         System.out.println(c);
         System.out.println(tab[7]);
 
+        Random losowacz = new Random();
+        int x = losowacz.nextInt(1001);
+
+        int suma = panZbyszek.dodaj(4, 8);
+        int suma2 = panJanusz.dodaj(5, 10);
+        int suma3 = panJanusz.dodaj(12, 40);
+        int suma4 = panJanusz.dodaj(1,2,3);
+        double suma5 = panJanusz.dodaj(4.4, 5.5);
+
+        double wynik = panJanusz.podziel(5, 8);
+        System.out.println(wynik);
+
+        System.out.println(panJanusz.podziel(10, 3));
+
+
+
+        Client client1 = new Client();
+        Client client2 = client1;
+
+        client1.name = "Janusz";
+
+        System.out.println(client1.name);
+        System.out.println(client2.name);
+
+        client1.name = "Wiesiek";
+
+        System.out.println(client1.name);
+        System.out.println(client2.name);
+
+        panJanusz.powiedzSwojeImie();
+        panZbyszek.powiedzSwojeImie();
     }
 }
